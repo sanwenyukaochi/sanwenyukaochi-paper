@@ -4,11 +4,11 @@ export default defineAstroPaperConfig({
   site: {
     url: "https://astro-paper.pages.dev/",
     title: "AstroPaper",
-    description: "A minimal, responsive and SEO-friendly Astro blog theme.",
+    description: "一个简洁、响应式且对 SEO 友好的 Astro 博客主题。",
     author: "Sat Naing",
     profile: "https://satna.ing",
     ogImage: "default-og.jpg",
-    lang: "en",
+    lang: "zh-cn",
     timezone: "Asia/Bangkok",
     dir: "ltr",
   },

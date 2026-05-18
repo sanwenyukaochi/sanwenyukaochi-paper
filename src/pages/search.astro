@@ -38,6 +38,7 @@ const t = useTranslations(locale);
       transition:persist
       data-backurl={backUrl}
       data-bundle-path={pagefindBundlePath}
+      data-locale={locale}
     >
     </div>
   </Main>
@@ -54,6 +55,7 @@ const t = useTranslations(locale);
 
     const bundlePath = pageFindSearch?.dataset?.bundlePath;
     if (!bundlePath) return;
+    const locale = pageFindSearch?.dataset?.locale || document.documentElement.lang;
 
     const params = new URLSearchParams(window.location.search);
 
@@ -77,6 +79,9 @@ const t = useTranslations(locale);
       const search = new PagefindUI({
         element: "#pagefind-search",
         bundlePath,
+        translations: {
+          language: locale,
+        },
         showImages: false,
         showSubResults: true,
         processTerm: function (term: string) {
